@@ -1,5 +1,9 @@
 import './App.css';
 import React, {useState} from 'react';
+import ShareOnSocial from "react-share-on-social";
+import favicon from "./favicon.png";
+
+
 
 const App = () => {
   const url = "https://api.quotable.io/random";
@@ -33,6 +37,17 @@ const App = () => {
           <button onClick={copy} className="btn">Copy</button>
           <button onClick={generateQuote}>Generate Another Quote</button>
         </div>
+        <ShareOnSocial
+      textToShare={quote.content}
+      link={url}
+      linkTitle={quote.author}
+      // linkMetaDesc="Stop going through the agony of choosing clothes that fit the weather and your mood."
+      linkFavicon={favicon}
+      noReferer
+    >
+      
+      <button className='share'>Share this qoute </button>
+    </ShareOnSocial> 
       </div>
     </>
   )

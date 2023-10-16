@@ -79,3 +79,9 @@ h1{
     grid-column: 2/4;
     grid-row: 1;
 }
+.share{
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
